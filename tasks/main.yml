@@ -22,5 +22,3 @@
     - domain_join_oupath is defined
     - domain_join_oupath | length > 0
     - domain_state_ou.reboot_required
-
-
