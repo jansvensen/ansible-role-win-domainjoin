@@ -1,6 +1,6 @@
 ---
 # tasks file for ansible-r-win-domainjoin
-- name: DNS Client
+- name: Configure CLient DNS for domain
   win_dns_client:
     adapter_names: "{{ dns_client_adapter }}"
     ipv4_addresses: "{{ dns_client_dns_server_ip }}"
