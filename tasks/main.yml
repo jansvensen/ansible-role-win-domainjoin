@@ -9,11 +9,11 @@
     state: domain
   register: domain_state
   when:
-    - (domain_join_oupath is undefined) or (domain_join_oupath | length == 0)
+    - (domainjoin_ou is undefined) or (domainjoin_ou | length == 0)
 
 - name: Reboot (OU) when Domain Member requires it
   win_reboot:
   when: 
-    - domain_join_oupath is defined
-    - domain_join_oupath | length > 0
+    - domainjoin_ou is defined
+    - domainjoin_ou | length > 0
     - domain_state_ou.reboot_required
