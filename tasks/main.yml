@@ -12,6 +12,4 @@
 - name: Reboot (OU) when Domain Member requires it
   win_reboot:
   when: 
-    - domainjoin_ou is defined
-    - domainjoin_ou | length > 0
     - domain_state_ou.reboot_required
