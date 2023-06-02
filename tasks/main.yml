@@ -1,5 +1,5 @@
 ---
-# tasks file for ansible-r-win-domainjoin
+# tasks file for ansible-role-win-domainjoin
 
 - name: Join Domain
   win_domain_membership:
