@@ -7,8 +7,6 @@
     domain_admin_user: "{{ domainjoin_user_name}}"
     domain_admin_password: "{{ domainjoin_user_pw }}"
     state: domain
-  register: domainjoin
 
-- name: Reboot (OU) when Domain Member requires it
+- name: Reboot
   win_reboot:
-  when: domainjoin.reboot_required
