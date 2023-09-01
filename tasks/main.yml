@@ -7,6 +7,4 @@
     domain_admin_user: "{{ domainjoin_user_name}}"
     domain_admin_password: "{{ domainjoin_user_pw }}"
     state: domain
-
-- name: Reboot
-  win_reboot:
+  notify: reboot
