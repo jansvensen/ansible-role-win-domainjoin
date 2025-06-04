@@ -1,6 +1,12 @@
 ---
 # tasks file for ansible-role-win-domainjoin
-
+- name: Set internal DNS server 
+  win_dns_client:
+    adapter_names: '*'
+    ipv4_addresses:
+    - "{{ root_dc_ipv4 }}"
+  register: dns
+  
 - name: Join Domain
   win_domain_membership:
     dns_domain_name: "{{ domainjoin_domain_name }}"
