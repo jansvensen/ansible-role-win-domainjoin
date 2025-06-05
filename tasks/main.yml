@@ -9,7 +9,7 @@
   register: dns
   
 - name: Join Domain
-  win_domain_membership:
+  microsoft.ad.membership:
     dns_domain_name: "{{ domainjoin_domain_name }}"
     domain_admin_user: "{{ domainjoin_user_name}}"
     domain_admin_password: "{{ domainjoin_user_pw }}"
