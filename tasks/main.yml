@@ -4,8 +4,7 @@
   win_dns_client:
     adapter_names: '*'
     ipv4_addresses:
-    # - "{{ root_dc_ipv4 }}"
-    - "10.0.2.4" # todo
+      - "{{ root_dc_ipv4 }}"
   register: dns
   
 - name: Join Domain
